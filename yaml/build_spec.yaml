@@ -77,6 +77,7 @@ steps:
       echo JAVA_HOME is
       echo $JAVA_HOME
       cd ${OCI_PRIMARY_SOURCE_DIR}
+      ls
       echo Extracting export variables - Working in `pwd`
       cd ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops
       export DEPLOY_VERSION=`grep "version" src/main/resources/application.yaml  | awk '{print $2}' | sed -e 's/"//g' `
