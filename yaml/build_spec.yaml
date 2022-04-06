@@ -156,7 +156,7 @@ steps:
           
   - type: Command
     name: "Fix resources location in container image"
-    timeoutInSeconds: 60
+    timeoutInSeconds: 1800
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops
       echo Running docker update - Working in `pwd`
