@@ -21,7 +21,8 @@ metadata:
   labels:
     app: helidon-quickstart-se
 spec:
-  type: NodePort
+  type: ClusterIP
+#  type: NodePort
   selector:
     app: helidon-quickstart-se
   ports:

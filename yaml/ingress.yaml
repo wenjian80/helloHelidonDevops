@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: helidon-quickstart-se-ing
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /greet
+          pathType: Prefix
+          backend:
+            service:
+              name: helidon-quickstart-se
+              port:
+                number: 8080
