@@ -97,7 +97,7 @@ steps:
 
   - type: Command
     name: "Install local JDK17"
-    timeoutInSeconds: 10000
+    timeoutInSeconds: 1800
     command: |
       cd ~
       mkdir InstalledSoftware
@@ -147,7 +147,7 @@ steps:
         
   - type: Command
     name: "Build Source and pack into container image"
-    timeoutInSeconds: 400
+    timeoutInSeconds: 1800
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops
       echo Running maven package - Working in `pwd`
