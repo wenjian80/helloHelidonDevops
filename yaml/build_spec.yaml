@@ -78,7 +78,7 @@ steps:
       echo $JAVA_HOME
       cd ${OCI_PRIMARY_SOURCE_DIR}
       echo Extracting export variables - Working in `pwd`      
-      export DEPLOY_VERSION=`grep "version" hellohelidondevops/src/main/resources/application.yaml  | awk '{print $2}' | sed -e 's/"//g' `
+      export DEPLOY_VERSION=`grep "version" helloHelidonDevops/src/main/resources/application.yaml  | awk '{print $2}' | sed -e 's/"//g' `
       echo "DEPLOY_VERSION: " $DEPLOY_VERSION
       echo transferring the OCIR_HOST and OCIR_STORAGE_NAMESPACE vault variables
       export OCIR_HOST=$OCIR_HOST_VAULT
