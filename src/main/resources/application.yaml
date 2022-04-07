@@ -1,7 +1,7 @@
 
 app:
   greeting: "Hello"
-  version: "0.1"
+  version: "0.2"
 
 server:
   port: 9090
