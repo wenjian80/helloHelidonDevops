@@ -171,15 +171,12 @@ outputArtifacts:
   - name: devopshelidon_image
     type: DOCKER_IMAGE
     location: devopshelidon:latest
-#  - name: app_deployment_yaml
-#    type: BINARY
-#    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/app.yaml
-#  - name: ingress_controller
-#    type: BINARY
-#    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/ingresscontroller.yaml
-#  - name: ingress_ngix
-#    type: BINARY
-#    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/ingress-nginx.yaml
-#  - name: ingress_app
-#    type: BINARY
-#    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/ingress_app.yaml
+  - name: app_deployment_yaml
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/app.yaml
+  - name: ingress_controller
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/ingresscontroller.yaml
+  - name: ingress_app
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/ingress_app.yaml
