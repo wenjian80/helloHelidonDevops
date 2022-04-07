@@ -14,4 +14,4 @@ spec:
             service:
               name: helidon-quickstart-se
               port:
-                number: 8080
+                number: 9090

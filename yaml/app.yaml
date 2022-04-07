@@ -26,8 +26,8 @@ spec:
   selector:
     app: helidon-quickstart-se
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 9090
+    targetPort: 9090
     name: http
 ---
 kind: Deployment
@@ -50,5 +50,5 @@ spec:
         image: ${OCIR_HOST}/${OCIR_STORAGE_NAMESPACE}/${YOUR_INITIALS}devops/devopshelidon:${DEPLOY_VERSION}
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8080
+        - containerPort: 9090
 ---
