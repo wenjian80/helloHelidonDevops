@@ -173,10 +173,10 @@ outputArtifacts:
     location: devopshelidon:latest
   - name: app_deployment_yaml
     type: BINARY
-    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/app.yaml
+    location: ${OCI_PRIMARY_SOURCE_DIR}/yaml/app.yaml
   - name: ingress_controller
     type: BINARY
-    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/ingresscontroller.yaml
+    location: ${OCI_PRIMARY_SOURCE_DIR}/yaml/ingresscontroller.yaml
   - name: ingress_app
     type: BINARY
-    location: ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops/yaml/ingress_app.yaml
+    location: ${OCI_PRIMARY_SOURCE_DIR}/yaml/ingress_app.yaml
