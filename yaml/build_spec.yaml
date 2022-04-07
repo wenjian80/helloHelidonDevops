@@ -79,7 +79,7 @@ steps:
       cd ${OCI_PRIMARY_SOURCE_DIR}
       ls
       echo Extracting export variables - Working in `pwd`
-      cd ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops
+      cd ${OCI_PRIMARY_SOURCE_DIR}
       export DEPLOY_VERSION=`grep "version" src/main/resources/application.yaml  | awk '{print $2}' | sed -e 's/"//g' `
       echo "DEPLOY_VERSION: " $DEPLOY_VERSION
       echo transferring the OCIR_HOST and OCIR_STORAGE_NAMESPACE vault variables
@@ -151,7 +151,7 @@ steps:
     name: "Build Source and pack into container image"
     timeoutInSeconds: 1800
     command: |
-      cd ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops
+      cd ${OCI_PRIMARY_SOURCE_DIR}
       echo Running maven package - Working in `pwd`
       mvn package  
       docker images
@@ -160,7 +160,7 @@ steps:
     name: "Fix resources location in container image"
     timeoutInSeconds: 1800
     command: |
-      cd ${OCI_PRIMARY_SOURCE_DIR}/helloHelidonDevops
+      cd ${OCI_PRIMARY_SOURCE_DIR}
       echo Running docker update - Working in `pwd`
       docker build  --tag devopshelidon:latest --file Dockerfile . 
       echo images are
