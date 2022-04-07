@@ -95,4 +95,24 @@
 7. The end state will look like the below
 ![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/deployment3.JPG)
 
-8. Click on manual run again. This time it will compile and deploy to your k8 cluster 
+8. Click on manual run again. This time it will compile and deploy to your k8 cluster
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/run1.JPG)
+
+9. You will see all the resources getting deploy into your k8
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/run2.JPG)
+
+10. Trying htting the app and you will see that it is version 0.1
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/run4.JPG)
+
+# Step 9(Trigger a build when code are commited)
+1. Click on trigger to create trigger
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/trigger1.JPG)
+
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/trigger2.JPG)
+  
+2. Now let edit some code and commit the changes. We are going to change /helloHelidonDevops/blob/main/src/main/resources/application.yaml.
+3. We going to change version: "0.1" to version: "0.2" and commit.
+4. Since our mirror is 2 min let's wait and you see see the trigger is triggered off.
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/triggerbuild.JPG)
+5. After the process is done, try hitting the app again and you will see now is version 0.2
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/triggerbuild2.JPG)
