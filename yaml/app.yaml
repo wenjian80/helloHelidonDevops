@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
       - name: helidon-quickstart-se
-        image: ${OCIR_HOST}/${OCIR_STORAGE_NAMESPACE}/${YOUR_INITIALS}devops/devopshelidon:${DEPLOY_VERSION}
+        image: ${REGISTRY_HOST}/${REGISTRY_NAMESPACE}/${YOUR_INITIALS}devops/devopshelidon:${DEPLOY_VERSION}
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9090
