@@ -55,8 +55,8 @@ env:
   # you can then access the value of that secret in your build_spec.yaml commands
   # these are DELIBERATELY not exported to future stages as they may cpontain confidential info
   vaultVariables:
-    REGISTRY_HOST: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiaphnf7esgr5ranlisgl3q677zlwcjd46iwsqv7x7kwpoa
-    REGISTRY_NAMESPACE: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiasad5l7epeqz4iogg5kxbiumme56rbtj4rsqv2xeijnfa
+    OCIR_HOST_VAULT: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiaphnf7esgr5ranlisgl3q677zlwcjd46iwsqv7x7kwpoa
+    OCIR_STORAGE_NAMESPACE_VAULT: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiasad5l7epeqz4iogg5kxbiumme56rbtj4rsqv2xeijnfa
     
   # exportedVariables are made available to use as parameters in sucessor Build Pipeline stages
   # We want to transfer over the vault values in this case, so create a variable to hold them
@@ -83,9 +83,9 @@ steps:
       export DEPLOY_VERSION=`grep "version" src/main/resources/application.yaml  | awk '{print $2}' | sed -e 's/"//g' `
       echo "DEPLOY_VERSION: " $DEPLOY_VERSION
       echo transferring the REGISTRY_HOST and REGISTRY_NAMESPACE vault variables
-      export REGISTRY_HOST=$REGISTRY_HOST_VAULT
+      export REGISTRY_HOST=$OCIR_HOST_VAULT
       echo REGISTRY_HOST is $REGISTRY_HOST
-      export REGISTRY_NAMESPACE=$REGISTRY_NAMESPACE_VAULT
+      export REGISTRY_NAMESPACE=$OCIR_STORAGE_NAMESPACE_VAULT
       echo REGISTRY_NAMESPACE is $REGISTRY_NAMESPACE
       echo Image will be stored to ${REGISTRY_HOST}/${REGISTRY_NAMESPACE}/${YOUR_INITIALS}devops/devopshelidon:${DEPLOY_VERSION}
     onFailure:
