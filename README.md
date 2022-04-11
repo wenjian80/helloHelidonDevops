@@ -106,6 +106,7 @@
 ![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/deploy3.JPG)
 
 6. The end state will look like this
+
 ![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/deploy4.JPG)
 
 7. Next let link up the CI with the CD. Click on the previous build pipeline and add a stage to trigger this deployment after the build is finish.
