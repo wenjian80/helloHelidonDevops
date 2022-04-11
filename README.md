@@ -115,6 +115,7 @@
 ![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/deployment2.JPG)
 
 7. The end state will look like the below
+
 ![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/deployment3.JPG)
 
 8. Click on manual run again. This time it will compile and deploy to your k8 cluster
