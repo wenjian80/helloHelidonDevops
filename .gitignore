@@ -14,3 +14,14 @@ nb-configuration.xml
 .classpath
 *.swp
 *~
+.gradle/vcs-1/gc.properties
+.gradle/configuration-cache/gc.properties
+.gradle/nb-cache/trust/D567FCD809BEDD2531EB4A00A3E0FCE2C6672365E2F04BFE3CACFABCEA6CC98E
+.gradle/checksums/checksums.lock
+.gradle/buildOutputCleanup/cache.properties
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/7.0/gc.properties
+.gradle/7.0/fileHashes/fileHashes.lock
+.gradle/7.0/fileChanges/last-build.bin
+.gradle/7.0/dependencies-accessors/gc.properties
+.gradle/7.0/dependencies-accessors/dependencies-accessors.lock
