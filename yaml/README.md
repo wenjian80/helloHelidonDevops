@@ -1,5 +1,5 @@
 
-Refer to below links
+Refer to below links for ingress
 
 https://github.com/kubernetes/ingress-nginx/blob/main/docs/deploy/index.md
 
