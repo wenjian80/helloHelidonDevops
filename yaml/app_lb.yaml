@@ -21,8 +21,8 @@ metadata:
   labels:
     app: helidon-quickstart-se
 spec:
-  type: LoadBalancer
-#  type: ClusterIP
+#  type: LoadBalancer
+  type: ClusterIP
 #  type: NodePort
   selector:
     app: helidon-quickstart-se
