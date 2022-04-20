@@ -322,7 +322,17 @@ metadata:
   namespace: ingress-nginx
 spec:
   externalTrafficPolicy: Local
-  ports:  
+  ports:
+  - appProtocol: http
+    name: httpa
+    port: 8080
+    protocol: TCP
+    targetPort: http
+  - appProtocol: http
+    name: httpb
+    port: 9090
+    protocol: TCP
+    targetPort: http
   - appProtocol: http
     name: http
     port: 80
@@ -615,3 +625,4 @@ webhooks:
     resources:
     - ingresses
   sideEffects: None
+
