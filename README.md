@@ -11,7 +11,8 @@
 2. Some steps are not explain in detail.
 3. It is a shorten version from our oracle live labs as it involve quite a number of steps . For full explanation please refer to (https://oracle.github.io/cloudtestdrive/AppDev/cloud-native/livelabs/standalone/devops-into-oke/index.html?lab=devops-into-oke)
 4. These instructions allow you to clone this repo to your own git follow the general instructions below and you are good to go.
-
+5. Refer to (https://github.com/oracle-devrel/oci-devops-examples) for other exmaples as well.
+6. 
 # Prereq
 1. We are making use of oke, container registry, container artifacts, vaults, oci devops service
 2. OKE is used to deploy our sample app.
