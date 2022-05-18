@@ -3,6 +3,10 @@
 # Disclaimer
 **Disclaimer: The information presented in this article is for educational/general information purposes only. Any scripts or examples are presented where-is, as-is, and are unsupported by Oracle Support and Development. Always refer to the official oracle documentation and other necessary documentation for offical steps.**
 
+
+**TODO added Vulnerability Audit Step to scan codes whcih is not documented here**
+
+
 1. Please refer to offical documentation for proper steps.
 2. The scripts provided are just a reference/educational.
 
