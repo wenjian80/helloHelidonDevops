@@ -96,7 +96,16 @@ steps:
           echo "Failure successfully handled"
         timeoutInSeconds: 400
         runAs: root
-
+  - type: VulnerabilityAudit
+    name: "Vulnerability Audit Step"
+    configuration:
+      buildType: maven               
+      pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/pom.xml 
+      maxPermissibleCvssV2Score: 10.0
+      maxPermissibleCvssV3Score: 10.0
+    knowledgeBaseId: ocid1.admknowledgebase.oc1.phx.amaaaaaac7x6gxiajblqcdggdeo2vhvj223cinnbhwbnhhbilf4hgfaah4iq
+    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaaq5riyrdcspo6jk5jd3ujhqvzjuq237gfih6khmotg4foqtmlvjwa
+    vulnerabilityAuditName: helloJavaDevopsReport
   - type: Command
     name: "Install local JDK17"
     timeoutInSeconds: 1800
@@ -165,16 +174,7 @@ steps:
       docker build  --tag devopshelidon:latest --file Dockerfile . 
       echo images are
       docker images
-  - type: VulnerabilityAudit
-    name: "Vulnerability Audit Step"
-    configuration:
-      buildType: maven               
-      pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/pom.xml 
-      maxPermissibleCvssV2Score: 10.0
-      maxPermissibleCvssV3Score: 10.0
-    knowledgeBaseId: ocid1.admknowledgebase.oc1.phx.amaaaaaac7x6gxiajblqcdggdeo2vhvj223cinnbhwbnhhbilf4hgfaah4iq
-    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaaq5riyrdcspo6jk5jd3ujhqvzjuq237gfih6khmotg4foqtmlvjwa
-    vulnerabilityAuditName: helloJavaDevopsReport
+
    
 # This basically preserves and "names" the artifacts below (if it's not here it gets junked) so the deliver artifact stage can handle them
 outputArtifacts:
